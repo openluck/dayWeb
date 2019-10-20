@@ -1,0 +1,106 @@
+body {
+	background:#454545;
+
+}
+* {
+	/*
+	box-sizing 属性允许你以某种方式定义某些元素，以适应指定区域。
+例如，假如您需要并排放置两个带边框的框，可通过将
+ box-sizing 设置为 "border-box"。这可令浏览器呈现出带有
+ 指定宽度和高度的框，并把边框和内边距放入框中
+	*/
+	box-sizing: border-box;
+}
+a,body {
+	/*给a和body设置背景颜色
+	 就是将文字变成白色
+	 */
+	color: #eee;
+}
+a {
+	/*消去a标签的下划线*/
+	text-decoration:none;
+}
+/*侧边栏  是最大的div*/
+.side-bar {
+	float:left;
+	width:20px;
+	/*给侧边栏设置了固定  滚动条滚动 侧边栏不懂*/
+	/*position: fixed;*/
+}
+/*侧边栏下面所有的 标签*/
+.side-bar > * {
+	padding: 10px 15px;
+}
+/*导航栏里的a  和标签列表里的a*/
+.side-bar .nav a,
+.side-bar .tag-list a {
+	display: block;
+	padding: 5px;
+	color:#888;
+
+	/*
+	transition 属性是一个简写属性，用于设置四个过渡属性：
+
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+	*/
+	transition: color200ms;
+	-webkit-transition: color200ms;
+	-o-transition: color200ms;
+}
+.side-bar .nav a:hover,
+.side-bar .tag-list a:hover {
+	color:#eee;
+}
+
+/*用户名*/
+.header .logo {
+	border:5px solid #eee;
+	padding:10px 20px;
+	font-size: 30px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.main {
+	float: right;
+	width: 80%;
+}
+.article-list {
+	background: #fff;
+  margin-right: 30%;
+	padding: 10px 30px;
+	color: #404040;
+	box-shadow: 0 0 2px rgba(0,0,0, .5);
+	-webkit-box-shadow : 0 0 2px rgba(0,0,0,.5);
+}
+.article-list .item > *,
+.article >* {
+	margin:20px 0;
+ }
+
+.article-list .item .title {
+	font-size:20px;
+	font-weight:700;
+}
+.article-list .item .status,
+.article .status {
+	color: #aaa;
+	font-size: 15px;
+}
+.article-list a {
+	color:#454545;
+}
+.article {
+	background: #fff;
+	margin-right: 30%;
+	padding: 10px 30px;
+	color: #404040;
+}
+
+#menu-checkbox, #menu-toggle {
+	display: none;
+}
